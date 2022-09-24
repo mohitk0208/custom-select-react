@@ -1,0 +1,107 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 1.25em;
+  padding: 0.25em;
+  display: flex;
+  align-items: center;
+  border: 0.05em solid #777;
+  border-radius: 0.2em;
+  gap: 0.25em;
+  margin: 0.25em;
+  margin-bottom: 1em;
+  outline: none;
+}
+
+.container:focus {
+  border: 0.05em solid blue;
+}
+
+.container:hover {
+  border: 0.05em solid skyblue;
+}
+
+.label {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 0.4em;
+}
+
+.option-badge {
+  padding: 0.1em 0.2em;
+  background-color: rgba(215, 244, 255, 0.561);
+  border: 0.05em solid #777;
+  outline: none;
+  border-radius: 0.2em;
+  font-size: 0.8em;
+  display: flex;
+  gap: 0.1em;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
+  cursor: pointer;
+}
+
+.option-badge:hover,
+.option-badge:focus {
+  background-color: rgba(255, 60, 60, 0.18);
+  color: red;
+  border-color: rgba(255, 60, 60, 0.18);
+}
+
+.remove-btn {
+  padding: 0.1em;
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.25em;
+}
+
+.divider {
+  align-self: stretch;
+  background-color: #777;
+  width: 0.05em;
+}
+
+.dropdown {
+  border: 0.4em solid transparent;
+  border-top: 00.4em solid #777;
+  transform: translate(0, 25%);
+  cursor: pointer;
+}
+
+.options-container {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 00.25em);
+  background-color: white;
+  z-index: 100;
+  border: 0.05em solid #777;
+  width: 100%;
+  border-radius: 0.2em;
+  list-style: none;
+  gap: 0.25em;
+  display: none;
+}
+
+.options-container.show {
+  display: block;
+}
+
+.option {
+  padding: 0.25em;
+}
+
+.option.highlighted {
+  background-color: rgb(122, 217, 255);
+}
+
+.option.selected {
+  background-color: rgb(199, 239, 255);
+}
