@@ -88,6 +88,7 @@
   list-style: none;
   gap: 0.25em;
   display: none;
+  padding: 0;
 }
 
 .options-container.show {
