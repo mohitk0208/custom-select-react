@@ -101,6 +101,7 @@ export default function Select({ multiple, value, options, onChange }: SelectPro
           multiple ? (
             value.map(v => (
               <button
+                key={v.value}
                 onClick={(e) => {
                   e.stopPropagation()
                   selectOption(v)
@@ -135,6 +136,7 @@ export default function Select({ multiple, value, options, onChange }: SelectPro
       <ul className={`${styles["options-container"]} ${isOpen && styles.show}`} >
         {options.map((option, index) => (
           <li
+            key={option.value}
             onClick={(e) => {
               e.stopPropagation()
               selectOption(option)
